@@ -26,10 +26,20 @@ namespace KolkoKrzyzyk
             Console.Write("Wpisz imie gracza B: ");
             imieGraczaB = Console.ReadLine();
 
-          
+
+            for(int i = 0; i < 3; i++)
+            {
+                for(int j = 0; j < 3; j++)
+                {
+
+                    Console.Write(" [ "+plansza[i,j]+" ] ");
+                }
+                Console.WriteLine();
+            }
+            
 
 
-            Console.ReadKey();
+              Console.ReadKey();
         }
         
     }
