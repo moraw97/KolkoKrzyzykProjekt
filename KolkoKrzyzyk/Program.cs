@@ -25,21 +25,42 @@ namespace KolkoKrzyzyk
             imieGraczaA = Console.ReadLine();
             Console.Write("Wpisz imie gracza B: ");
             imieGraczaB = Console.ReadLine();
+            bool koniecGry = false;
 
-
-            for(int i = 0; i < 3; i++)
+            while (!koniecGry)
             {
-                for(int j = 0; j < 3; j++)
+                Console.Clear();
+                RysujPlansze(plansza);
+                RuchGracza1(plansza);
+            }
+
+              
+        }
+
+        static void RuchGracza1(char[,] plansza) {
+
+            int xWidth = Convert.ToInt32(Console.ReadLine());
+            int xHeight = Convert.ToInt32(Console.ReadLine());
+
+            plansza[xWidth-1, xHeight-1] = 'x';
+
+        }
+
+        static void RysujPlansze(char[,] plansza)
+        {
+            int height = plansza.GetLength(0);
+            int width = plansza.GetLength(1);
+
+            for (int i = 0; i < height; i++)
+            {
+                for (int j = 0; j < width; j++)
                 {
 
-                    Console.Write(" [ "+plansza[i,j]+" ] ");
+                    Console.Write(" [ " + plansza[i, j] + " ] ");
                 }
                 Console.WriteLine();
             }
-            
 
-
-              Console.ReadKey();
         }
         
     }
